@@ -1,4 +1,4 @@
-#!/home/env3.5/bin/python3.5
+#!/home/xiejg/awesome-python3-webapp/env/bin/python3.5
 #-*- coding:utf-8 -*-
 import asyncio, logging
 import aiomysql

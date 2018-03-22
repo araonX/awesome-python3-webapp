@@ -1,17 +1,16 @@
-#!/home/env3.5/bin/python3.5
+#!/home/xiejg/awesome-python3-webapp/env/bin/python3.5
 import logging;logging.basicConfig(level=logging.INFO)
 import asyncio,os,json,time
 from datetime import datetime
 from aiohttp import web
 def index(request):
-    return web.Response(body=b'<html><h1>Awesome</h1></html>')
+    return web.Response(body=b'<h1>Awesome</h1>')
 
-#@asyncio.coroutine
 async def init(loop):
     app = web.Application(loop=loop)
     app.router.add_route('GET','/',index)
-    srv = await loop.create_server(app.make_handler(),'192.168.253.59',9000)
-    logging.info('server started at http://192.168.253.59:9000...')
+    srv = await loop.create_server(app.make_handler(),'172.16.0.13',9000)
+    logging.info('server started at http://111.230.211.17:9000...')
     return srv
 loop = asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
