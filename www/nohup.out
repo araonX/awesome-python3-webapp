@@ -1,0 +1,114 @@
+INFO:root:create database connection pool...
+INFO:root:init jinja2...
+INFO:root:set jinja2 template path: /home/xiejg/awesome-python3-webapp/www/templates
+INFO:root:found model: User (table: users)
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: email ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: admin ==> <BooleanField, boolean:None>
+INFO:root:   found mapping: passwd ==> <StringField, varchar(50):None>
+INFO:root:found model: Blog (table: blogs)
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: user_image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: user_name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: summary ==> <StringField, varchar(200):None>
+INFO:root:   found mapping: content ==> <TextField, text:None>
+INFO:root:   found mapping: user_id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: name ==> <StringField, varchar(50):None>
+INFO:root:found model: Comment (table: comments)
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: user_image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: blog_id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: content ==> <TextField, text:None>
+INFO:root:   found mapping: user_name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: user_id ==> <StringField, varchar(50):None>
+INFO:root:add route GET / => index(request)
+INFO:root:add static /static/ => /home/xiejg/awesome-python3-webapp/www/static
+INFO:root:server started at http://111.230.211.17:9000...
+Traceback (most recent call last):
+  File "./app.py", line 125, in <module>
+    loop.run_forever()
+  File "/usr/local/lib/python3.5/asyncio/base_events.py", line 295, in run_forever
+    self._run_once()
+  File "/usr/local/lib/python3.5/asyncio/base_events.py", line 1218, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/local/lib/python3.5/selectors.py", line 432, in select
+    fd_event_list = self._epoll.poll(timeout, max_ev)
+KeyboardInterrupt
+INFO:root:create database connection pool...
+INFO:root:init jinja2...
+INFO:root:set jinja2 template path: /home/xiejg/awesome-python3-webapp/www/templates
+INFO:root:found model: User (table: users)
+INFO:root:   found mapping: passwd ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: admin ==> <BooleanField, boolean:None>
+INFO:root:   found mapping: email ==> <StringField, varchar(50):None>
+INFO:root:found model: Blog (table: blogs)
+INFO:root:   found mapping: name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: content ==> <TextField, text:None>
+INFO:root:   found mapping: user_name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: user_image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: summary ==> <StringField, varchar(200):None>
+INFO:root:   found mapping: user_id ==> <StringField, varchar(50):None>
+INFO:root:found model: Comment (table: comments)
+INFO:root:   found mapping: content ==> <TextField, text:None>
+INFO:root:   found mapping: created_at ==> <FloatField, real:None>
+INFO:root:   found mapping: id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: user_name ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: blog_id ==> <StringField, varchar(50):None>
+INFO:root:   found mapping: user_image ==> <StringField, varchar(500):None>
+INFO:root:   found mapping: user_id ==> <StringField, varchar(50):None>
+INFO:root:add route GET / => index(request)
+INFO:root:add static /static/ => /home/xiejg/awesome-python3-webapp/www/static
+INFO:root:server started at http://111.230.211.17:9000...
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 2
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:01:42:33 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 2
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:01:43:21 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 2
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:03:27:11 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 2
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:03:27:12 +0000] "GET / HTTP/1.1" 200 405 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 3
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:03:28:03 +0000] "GET / HTTP/1.1" 200 444 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 3
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:03:28:19 +0000] "GET / HTTP/1.1" 200 444 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"
+INFO:root:Request: GET /
+INFO:root:Response handler...
+INFO:root:call with args: {'request': <Request GET / >}
+INFO:root:SQL: select `id`, `passwd`, `name`, `image`, `created_at`, `admin`, `email` from `users`
+INFO:root:rows returnd: 3
+INFO:aiohttp.access:60.29.218.106 [23/Mar/2018:04:49:19 +0000] "GET / HTTP/1.1" 200 444 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"

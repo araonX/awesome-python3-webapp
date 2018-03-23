@@ -8,7 +8,7 @@ async def test(loop, **kw):
     await u.save()
     await orm.destory_pool()
 
-data=dict(name='xjg', email='1011000@qq.com', passwd='13241', image='about:blank', id='1245')
+data=dict(name='dyb', email='1011002@qq.com', passwd='13241', image='about:blank', id='1247')
 loop=asyncio.get_event_loop()
 loop.run_until_complete(test(loop,**data))
 loop.close()
